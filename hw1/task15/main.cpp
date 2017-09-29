@@ -1,18 +1,16 @@
-//
-// Created by artyom on 28.9.17.
-//
-
 #include <iostream>
 
+using namespace std;
 int main() {
-    std::cout << "Char size is: " << sizeof(char) << std::endl;
-    std::cout << "Bool size is: " << sizeof(bool) << std::endl;
-    std::cout << "Int size is: " << sizeof(int) << std::endl;
-    std::cout << "Short int size is: " << sizeof(short int) << std::endl;
-    std::cout << "Long int size is: " << sizeof(long int) << std::endl;
-    std::cout << "Unsigned int size is: " << sizeof(unsigned int) << std::endl;
-    std::cout << "Float size is: " << sizeof(float) << std::endl;
-    std::cout << "Double size is: " << sizeof(double) << std::endl;
-    std::cout << "Long double size is: " << sizeof(long double) << std::endl;
+    cout << "Char size is: " << sizeof(char) << endl;
+    cout << "Bool size is: " << sizeof(bool) <<endl;
+    cout << "Int size is: " << sizeof(int) << endl;
+    cout << "Short int size is: " << sizeof(short int) << endl;
+    cout << "Long int size is: " << sizeof(long int) << endl;
+    cout << "Unsigned int size is: " << sizeof(unsigned int) << endl;
+    cout << "Float size is: " << sizeof(float) << endl;
+    cout << "Double size is: " << sizeof(double) << endl;
+    cout << "Long double size is: " << sizeof(long double) << endl;
+    system("pause");
     return 0;
 }

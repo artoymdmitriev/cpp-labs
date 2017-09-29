@@ -1,14 +1,9 @@
-//
-// Created by artyom on 27.9.17.
-//
-
 #include <iostream>
 #include <cmath>
 
 double side_length(double, double, double, double);
 
-int main()
-{
+int main() {
     double x1, y1, x2, y2, x3, y3, a, b, c, p, hp, area;
     std::cout << "Enter x1, y1: ";
     std::cin >> x1 >> y1;
@@ -27,10 +22,10 @@ int main()
 
     std::cout << "Triangle area is: " << p << std::endl;
     std::cout << "Triangle perimeter is: " << area << std::endl;
+    std::system("pause");
     return 0;
 }
 
-double side_length(double x1, double y1, double x2, double y2)
-{
+double side_length(double x1, double y1, double x2, double y2) {
     return sqrt(pow((x2 - x1), 2) + pow((y2 - y1), 2));
 }

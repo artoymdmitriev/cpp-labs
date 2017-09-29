@@ -1,16 +1,17 @@
 #include <iostream>
 
 int main() {
-    int a;
+    int number;
     std::cout << "Enter the number: ";
-    std::cin >> a;
+    std::cin >> number;
 
-    int hundreds = a / 100;
-    int tens = (a % 100) / 10;
-    int units = (a % 10);
+    int hundreds = number / 100;
+    int tens = (number % 100) / 10;
+    int units = (number % 10);
 
     std::cout << units << "*10^0 + ";
     std::cout << tens << "*10^1 + ";
-    std::cout << hundreds << "*10^2";
+    std::cout << hundreds << "*10^2" << std::endl;
+    std::system("pause");
     return 0;
 }
