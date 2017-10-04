@@ -20,13 +20,11 @@ int main() {
 }
 
 void print_triangle_type(int a, int b, int c) {
-    if(a * a == b * b + c * c || b * b == a * a + c * c ||
-            c * c == a * a + b * b) {
-        cout << "Rectangular triangle" << endl;
-    } else if(a * a > b * b + c * c || b * b > a * a + c * c
-              || c * c > b * b + a * a) {
-        cout << "Obtuse triangle" << endl; // Obtuse - тупоугольный
+    if(a == b && a == c) {
+        cout << "Equilateral triangle" << endl; // Equilateral - равносторонний
+    } else if(a == b || a == c || b == c) {
+        cout << "Isosceles triangle" << endl; // Isosceles - равнобедренный
     } else {
-        cout << "Acute triangle" << endl; // Acute - остроугольный
+        cout << "Versatile triangle" << endl; // Versatile - разносторонний
     }
 }
