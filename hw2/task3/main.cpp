@@ -1,21 +1,36 @@
 #include <iostream>
 
-using namespace std;
+int max(int, int);
+int min(int, int);
+
+using std::cin;
+using std::cout;
+using std::endl;
+
 int main() {
-    int numbers[3];
+    int a, b, c;
     cout << "Enter 3 numbers: ";
-    cin >> numbers[0] >> numbers[1] >> numbers[2];
+    cin >> a >> b >> c;
 
-    int min = numbers[0];
-    int max = numbers[0];
-
-    for(int i = 1; i < 3; i++) {
-        if(min > numbers[i]) min = numbers[i];
-        if(max < numbers[i]) max = numbers[i];
-    }
-    cout << "Max value is: " << max << endl;
-    cout << "Min value is: " << min << endl;
+    cout << "Max value is: " << max(max(a, b), c) << endl;
+    cout << "Min value is: " << min(min(a, b), c) << endl;
 
     system("pause");
     return 0;
+}
+
+int max(int num1, int num2) {
+    if(num1 > num2) {
+        return num1;
+    } else {
+        return num2;
+    }
+}
+
+int min(int num1, int num2) {
+    if(num1 < num2) {
+        return num1;
+    } else {
+        return num2;
+    }
 }
