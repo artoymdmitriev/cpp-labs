@@ -15,9 +15,9 @@ int main() {
     absX = fabs(x);
     absY = fabs(y);
 
-    if(absX == r1 && absY == r1 ||
-            absX == r2 && absY == r2 ||
-            absX == r3 && absY == r3) {
+    if((absX == r1 && absY == r1) ||
+            (absX == r2 && absY == r2) ||
+            (absX == r3 && absY == r3)) {
         cout << "The point is in the 5th part" << endl;
     } else if(absX < r1 && absY < r1) {
         cout << "The point is in the 1st part" << endl;
