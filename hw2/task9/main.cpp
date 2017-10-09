@@ -1,7 +1,5 @@
 #include <iostream>
 
-double abs(double);
-
 using std::cin;
 using std::cout;
 using std::endl;
@@ -12,9 +10,6 @@ int main() {
     cin >> r1 >> r2 >> r3;
     cout << "Enter x, y: ";
     cin >> x >> y;
-
-    x = abs(x);
-    y = abs(y);
 
     if((x * x + y * y == r1 * r1) ||
             (x * x + y * y == r2 * r2) ||
@@ -32,12 +27,4 @@ int main() {
 
     system("pause");
     return 0;
-}
-
-double abs(double arg) {
-    if (arg < 0) {
-        return -arg;
-    } else {
-        return arg;
-    }
 }
