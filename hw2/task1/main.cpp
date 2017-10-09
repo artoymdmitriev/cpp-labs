@@ -1,15 +1,18 @@
 #include <iostream>
 
+using std::cout;
+using std::cin;
+using std::endl;
 int main() {
     int number;
-    std::cout << "Enter the number: ";
-    std::cin >> number;
+    cout << "Enter the number: ";
+    cin >> number;
     if(number % 2 == 0) {
-        std::cout << "The number is even.";
+        cout << "The number is even.";
     } else {
-        std::cout << "The number is odd.";
+        cout << "The number is odd.";
     }
-    std::cout << std::endl;
-    std::system("pause");
+    cout << endl;
+    system("pause");
     return 0;
 }
