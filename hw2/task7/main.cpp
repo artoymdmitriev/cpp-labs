@@ -1,10 +1,12 @@
 #include <iostream>
 
-void print_triangle_type(int, int, int);
+void print_triangle_type(double, double, double);
 
-using namespace std;
+using std::cin;
+using std::cout;
+using std::endl;
 int main() {
-    int a, b, c;
+    double a, b, c;
     cout << "Enter the length of 3 sides: ";
     cin >> a >> b >> c;
 
@@ -19,7 +21,7 @@ int main() {
     return 0;
 }
 
-void print_triangle_type(int a, int b, int c) {
+void print_triangle_type(double a, double b, double c) {
     if(a == b && a == c) {
         cout << "Equilateral triangle" << endl; // Equilateral - равносторонний
     } else if(a == b || a == c || b == c) {
