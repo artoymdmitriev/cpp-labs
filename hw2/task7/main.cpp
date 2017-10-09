@@ -22,7 +22,7 @@ int main() {
 }
 
 void print_triangle_type(double a, double b, double c) {
-    if(a == b && a == c) {
+    if(a == b && a == c && b == c) {
         cout << "Equilateral triangle" << endl; // Equilateral - равносторонний
     } else if(a == b || a == c || b == c) {
         cout << "Isosceles triangle" << endl; // Isosceles - равнобедренный
