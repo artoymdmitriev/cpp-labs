@@ -1,14 +1,13 @@
 #include <iostream>
 
+double min(double, double);
+double max(double, double);
+
 using std::cin;
 using std::cout;
 using std::endl;
-using std::min;
-using std::max;
-using std::system;
-
 int main() {
-    int a, b, c, num1, num2, num3;
+    double a, b, c, num1, num2, num3;
     cout << "Enter 3 numbers: ";
     cin >> a >> b >> c;
     cout << "Sorting..." << endl;
@@ -29,4 +28,20 @@ int main() {
     cout << num3 << endl;
     system("pause");
     return 0;
+}
+
+double min(double num1, double num2) {
+    if(num1 < num2) {
+        return num1;
+    } else {
+        return num2;
+    }
+}
+
+double max(double num1, double num2) {
+    if(num1 > num2) {
+        return num1;
+    } else {
+        return num2;
+    }
 }
