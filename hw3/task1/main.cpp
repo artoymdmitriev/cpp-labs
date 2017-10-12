@@ -1,7 +1,7 @@
 #include <iostream>
 
-int max(int, int);
-int min(int, int);
+double max(double, double);
+double min(double, double);
 
 using std::cin;
 using std::cout;
@@ -9,7 +9,7 @@ using std::endl;
 
 int main() {
     while(true) {
-        int a, b, c;
+        double a, b, c;
         cout << "Enter 3 numbers: ";
         cin >> a >> b >> c;
 
@@ -18,10 +18,10 @@ int main() {
     }
 }
 
-int max(int num1, int num2) {
+double max(double num1, double num2) {
     return num1 > num2 ? num1 : num2;
 }
 
-int min(int num1, int num2) {
+double min(double num1, double num2) {
     return num1 < num2 ? num1 : num2;
 }
