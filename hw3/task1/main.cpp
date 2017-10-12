@@ -23,8 +23,6 @@ int main() {
             break;
         } else {
             cout << "Sorry, I don't understand you... ";
-            answer = get_answer();
-            continue;
         }
         answer = get_answer();
     }
