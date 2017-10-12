@@ -9,8 +9,8 @@ using std::cout;
 using std::endl;
 
 int main() {
+    char answer = 'Y';
     while(true) {
-        char answer = get_answer();
         if(answer == 'Y') {
             double a, b, c;
             cout << "Enter 3 numbers: ";
@@ -22,9 +22,11 @@ int main() {
             cout << "Goodbye!";
             break;
         } else {
-            cout << "Sorry, I don't understand you...";
+            cout << "Sorry, I don't understand you... ";
+            answer = get_answer();
             continue;
         }
+        answer = get_answer();
     }
 }
 
