@@ -17,7 +17,7 @@ int main() {
     } while (abs(result) > accuracy);
 
     cout << "Sum is: " << sum << endl << k;
-
+    system("pause");
     return 0;
 }
 
