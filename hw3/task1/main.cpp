@@ -19,13 +19,15 @@ int main() {
             cout << "Max value is: " << max(max(a, b), c) << endl;
             cout << "Min value is: " << min(min(a, b), c) << endl;
         } else if(answer == 'N') {
-            cout << "Goodbye!";
+            cout << "Goodbye!" << endl;
             break;
         } else {
             cout << "Sorry, I don't understand you... ";
         }
         answer = get_answer();
     }
+    system("pause");
+    return 0;
 }
 
 double max(double num1, double num2) {
