@@ -8,14 +8,14 @@ using std::endl;
 
 int main() {
     int num = 2, prev_num = 1;
-    double result, sum = 0, accuracy = 0.001;
+    double result = 0.002, sum = 0, accuracy = 0.001;
 
-    do {
+    while (abs(result) > accuracy) {
         result = 1.0 / (prev_num * num);
         sum += 1.0 / (prev_num * num);
         num++;
         prev_num++;
-    } while (abs(result) > accuracy);
+    }
 
     cout << "Sum is: " << sum << endl;
     cout << "Num1: " << prev_num << endl;
