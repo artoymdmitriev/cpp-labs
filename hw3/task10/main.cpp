@@ -8,15 +8,15 @@ using std::endl;
 
 int main() {
     int k = 1;
-    double result, sum = 0, accuracy = 0.001;
+    double result = 0.002, sum = 0, accuracy = 0.001;
 
-    do {
+    while (abs(result) > accuracy) {
         result = 1.0 / (k * k);
         sum += result;
         k++;
-    } while (abs(result) > accuracy);
+    }
 
-    cout << "Sum is: " << sum << endl << k;
+    cout << "Sum is: " << sum << endl;
     system("pause");
     return 0;
 }
