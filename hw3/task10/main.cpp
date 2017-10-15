@@ -8,10 +8,11 @@ using std::endl;
 
 int main() {
     int k = 1;
-    double result = 0.002, sum = 0, accuracy = 0.001;
+    double sum = 0, accuracy = 0.001;
 
-    while (abs(result) > accuracy) {
-        result = 1.0 / (k * k);
+    while (true) {
+        double result = 1.0 / (k * k);
+        if(abs(result) < accuracy) break;
         sum += result;
         k++;
     }
