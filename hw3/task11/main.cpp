@@ -8,14 +8,18 @@ using std::endl;
 
 int main() {
     int num = 2, prev_num = 1;
-    double result, sum = 0, accuracy;
+    double sum = 0, accuracy;
 
-    cout << "Enter accuracy: ";
-    cin >> accuracy;
-    result = accuracy + 1;
+    while(true) {
+        cout << "Enter accuracy: ";
+        cin >> accuracy;
+        if(accuracy > 0 && accuracy < 1) break;
+        cout << "You entered wrong number. It must be between 0 and 1" << endl;
+    }
 
-    while (abs(result) > accuracy) {
-        result = 1.0 / (prev_num * num);
+    while (true) {
+        double result = 1.0 / (prev_num * num);
+        if(abs(result) < accuracy) break;
         sum += 1.0 / (prev_num * num);
         num++;
         prev_num++;
