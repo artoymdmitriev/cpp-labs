@@ -8,7 +8,11 @@ using std::endl;
 
 int main() {
     int num = 2, prev_num = 1;
-    double result = 0.002, sum = 0, accuracy = 0.001;
+    double result, sum = 0, accuracy;
+
+    cout << "Enter accuracy: ";
+    cin >> accuracy;
+    result = accuracy + 1;
 
     while (abs(result) > accuracy) {
         result = 1.0 / (prev_num * num);
