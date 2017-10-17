@@ -7,7 +7,7 @@ using std::cout;
 using std::endl;
 
 int main() {
-    int num = 2, prev_num = 1;
+    int num = 1;
     double sum = 0, accuracy;
 
     while(true) {
@@ -18,16 +18,13 @@ int main() {
     }
 
     while (true) {
-        double result = 1.0 / (prev_num * num);
+        double result = 1.0 / (num * (num + 1));
         if(abs(result) < accuracy) break;
-        sum += 1.0 / (prev_num * num);
+        sum += 1.0 / (num * (num + 1));
         num++;
-        prev_num++;
     }
 
     cout << "Sum is: " << sum << endl;
-    cout << "Num1: " << prev_num << endl;
-    cout << "Num2: " << num << endl;
 
     system("pause");
     return 0;
