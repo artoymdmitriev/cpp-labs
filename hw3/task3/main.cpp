@@ -14,5 +14,6 @@ int main() {
         number /= 10;
     }
     cout << "Max number is: " << max;
+    system("pause");
     return 0;
 }
