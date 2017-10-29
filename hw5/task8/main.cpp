@@ -3,8 +3,7 @@
 
 int numberOfDigits(int);
 int digitN(int, int);
-int toMultiply(int);
-int randomIndex();
+void outputDigits(int);
 
 using std::cin;
 using std::cout;
@@ -14,11 +13,11 @@ int main() {
     int num1, num2, num3, num4, num5;
     cout << "Enter 5 numbers: " << endl;
     cin >> num1 >> num2 >> num3 >> num4 >> num5;
-    cout << digitN(num1, randomIndex()) << endl;
-    cout << digitN(num2, randomIndex()) << endl;
-    cout << digitN(num3, randomIndex()) << endl;
-    cout << digitN(num4, randomIndex()) << endl;
-    cout << digitN(num5, randomIndex()) << endl;
+    outputDigits(num1);
+    outputDigits(num2);
+    outputDigits(num3);
+    outputDigits(num4);
+    outputDigits(num5);
     return 0;
 }
 
@@ -43,8 +42,9 @@ int numberOfDigits(int num) {
     return result;
 }
 
-int randomIndex() {
-    int random = rand() % 5 + 1;
-    cout << "Digit at position: " << random << " is: ";
-    return random;
+void outputDigits(int num) {
+    cout << "Number is: " << num << endl;
+    for(int i = 1; i <= 5; i++) {
+        cout << "Digit at position " << i << " is: " << digitN(num, i) << endl;
+    }
 }
