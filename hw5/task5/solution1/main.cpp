@@ -9,13 +9,14 @@ using std::cout;
 using std::endl;
 
 int main() {
-    int k, d1, d2, result;
+    int k, d1, d2;
     cout << "Enter k, d1, d2" << endl;
     cin >> k >> d1 >> d2;
-    result = addRightDigit(d1, k);
-    cout << result << endl;
-    result = addLeftDigit(d2, result);
-    cout << result << endl;
+    k = addRightDigit(d1, k);
+    cout << k << endl;
+    k = addLeftDigit(d2, k);
+    cout << k << endl;
+    system("pause");
     return 0;
 }
 
