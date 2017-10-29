@@ -18,6 +18,7 @@ int main() {
     outputDigits(num3);
     outputDigits(num4);
     outputDigits(num5);
+    system("pause");
     return 0;
 }
 
