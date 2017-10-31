@@ -9,10 +9,11 @@ using std::endl;
 
 int main() {
     int a, b;
-    cout << "Enter A and B" << endl;
+    cout << "Enter A and B: " << endl;
     cin >> a >> b;
     printAsc(a, b);
     printDesc(a, b);
+    system("pause");
     return 0;
 }
 
