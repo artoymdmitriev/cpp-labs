@@ -18,6 +18,7 @@ int main() {
     cout << "Enter start val, end val and accuracy (e.g. -3.0, 3.0, 0.001)" << endl;
     cin >> startVal >> endVal >> eps;
     printTable(startVal, endVal, eps);
+    system("pause");
     return 0;
 }
 
@@ -51,7 +52,7 @@ void printTable(double startVal, double endVal, double eps) {
 
     printHead(colWidth1, colWidth2);
     while(startVal <= endVal) {
-        printRow(colWidth1, colWidth2, startVal, EXP(startVal, eps), exp(startVal), EXP(startVal, 0.01) - exp(startVal));
+        printRow(colWidth1, colWidth2, startVal, EXP(startVal, eps), exp(startVal), EXP(startVal, eps) - exp(startVal));
         startVal += 0.5;
     }
 }
