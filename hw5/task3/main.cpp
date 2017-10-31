@@ -9,8 +9,7 @@ using std::endl;
 
 int main() {
     int year = get_year();
-    cout << (is_leap_year(year) ? 366 : 365);
-    cout << endl;
+    cout << (is_leap_year(year) ? 366 : 365) << endl;
     system("pause");
     return 0;
 }
