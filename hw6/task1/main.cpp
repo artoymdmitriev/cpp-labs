@@ -13,6 +13,7 @@ using std::endl;
 
 int main() {
     cout << f1(21) << endl;
+    system("pause");
     return 0;
 }
 

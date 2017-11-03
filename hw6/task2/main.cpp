@@ -11,6 +11,7 @@ using std::endl;
 
 int main() {
     cout << f4(',') << endl;
+    system("pause");
     return 0;
 }
 
