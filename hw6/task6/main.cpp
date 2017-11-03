@@ -10,8 +10,17 @@ using std::setw;
 
 int main() {
     int startNum, endNum, numbersInRow;
-    cout << "Enter start number, end number and numbers in row: " << endl;
-    cin >> startNum >> endNum >> numbersInRow;
+    while(true) {
+        cout << "Enter start number, end number and numbers in row: " << endl;
+        cin >> startNum >> endNum >> numbersInRow;
+        if(startNum > endNum) {
+            cout << "Start number must be less than end number! Try again" << endl;
+        } else if(startNum == 0 || endNum == 0 || numbersInRow == 0) {
+            cout << "Numbers can't be 0! Try again" << endl;
+        } else {
+            break;
+        }
+    }
     printNumbers(startNum, endNum, numbersInRow);
     system("pause");
     return 0;

@@ -1,24 +1,22 @@
 #include <iostream>
 
-int gcd(int, int);
-int lcm(int, int);
+int greatestCommonDivisor(int, int);
+int leastCommonMultiple(int, int);
+int getNumber();
 
 using std::cin;
 using std::cout;
 using std::endl;
 
 int main() {
-    int a, b;
-    cout << "Enter two numbers: " << endl;
-    cin >> a >> b;
-    cout << "Greatest common divisor: " << gcd(a, b) << endl;
-    cout << "Least common multiple: " << lcm(a, b) << endl;
+    int a = getNumber(), b = getNumber();
+    cout << "Greatest common divisor: " << greatestCommonDivisor(a, b) << endl;
+    cout << "Least common multiple: " << leastCommonMultiple(a, b) << endl;
     system("pause");
     return 0;
 }
 
-//Greatest common divisor
-int gcd(int num1, int num2) {
+int greatestCommonDivisor(int num1, int num2) {
     int startVal = num1 < num2 ? num1 : num2;
     for(int i = startVal; i > 0; i--) {
         if(num1 % i == 0 && num2 % i == 0) return i;
@@ -26,10 +24,23 @@ int gcd(int num1, int num2) {
     return -1;
 }
 
-//Least common multiple
-int lcm(int num1, int num2) {
+int leastCommonMultiple(int num1, int num2) {
     int startVal = num1 > num2 ? num1 : num2;
     for(int i = startVal;;i++) {
         if(i % num1 == 0 && i % num2 == 0) return i;
     }
+}
+
+int getNumber() {
+    int num;
+    while(true) {
+        cout << "Enter the number: " << endl;
+        cin >> num;
+        if(num <= 0) {
+            cout << "The number must be more than 0! Try again." << endl;
+        } else {
+            break;
+        }
+    }
+    return num;
 }

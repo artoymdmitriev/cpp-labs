@@ -41,4 +41,3 @@ char replaceOtherCharacters(char ch) {
         return '.';
     else return ch;
 }
-

@@ -12,7 +12,15 @@ using std::cout;
 using std::endl;
 
 int main() {
-    cout << f1(21) << endl;
+    int a;
+    cout << "Enter the number: " << endl;
+    cin >> a;
+    if(f1(a)) cout << "The number belongs to 1st multiplicity" << endl;
+    if(f2(a)) cout << "The number belongs to 2nd multiplicity" << endl;
+    if(f3(a)) cout << "The number belongs to 3rd multiplicity" << endl;
+    if(f4(a)) cout << "The number belongs to 4th multiplicity" << endl;
+    if(f5(a)) cout << "The number belongs to 5th multiplicity" << endl;
+    if(f6(a)) cout << "The number belongs to 6th multiplicity" << endl;
     system("pause");
     return 0;
 }
