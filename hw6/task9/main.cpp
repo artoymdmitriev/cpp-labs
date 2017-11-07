@@ -15,7 +15,7 @@ int main() {
 }
 
 int calcCentury(int year) {
-    return year / 100 + 1;
+    return (year + 99) / 100;
 }
 
 int getYear() {
