@@ -15,11 +15,12 @@ int main() {
     const int length = 5;
     int array[length];
     fillArray(array, length);
+
     int min = minValue(array, length);
-    cout << "Min value is: " << min << " it occurs " << findOccurances(array, length, min) << " times." << endl;
+    cout << "Min value is: " << min << " it occurs " << findOccurances(array, length, min) << " time(s)." << endl;
     if(checkArrayForRepetitions(array, length)) {
         int secondMin = secondMinValue(array, length, min);
-        cout << "Second min value is: " << secondMin << " it occurs " << findOccurances(array, length, secondMin) << " times." << endl;
+        cout << "Second min value is: " << secondMin << " it occurs " << findOccurances(array, length, secondMin) << " time(s)." << endl;
     }
     system("pause");
     return 0;

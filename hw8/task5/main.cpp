@@ -1,5 +1,6 @@
 #include <iostream>
 
+void fillArray(int*, int);
 void findMaxValues(int*, int);
 void findMinValues(int*, int);
 int maxValue(int*, int);
@@ -12,18 +13,23 @@ using std::endl;
 int main() {
     const int length = 5;
     int array[length];
+    fillArray(array, length);
+    findMaxValues(array, length);
+    findMinValues(array, length);
+    system("pause");
+    return 0;
+}
+
+void fillArray(int *array, int length) {
     cout << "Enter " << length << " numbers: ";
     for(int i = 0; i < length; i++) {
         cin >> array[i];
     }
-    findMaxValues(array, length);
-    findMinValues(array, length);
-    return 0;
 }
 
 void findMaxValues(int* array, int length) {
     int max = maxValue(array, length);
-    cout << "Max value is: " << max << ". Indices: ";
+    cout << "Max value is: " << max << ". Index (indices): ";
     for(int i = 0; i < length; i++) {
         if(array[i] == max) {
             cout << i << " ";
@@ -34,7 +40,7 @@ void findMaxValues(int* array, int length) {
 
 void findMinValues(int* array, int length) {
     int min = minValue(array, length);
-    cout << "Min value is: " << min << ". Indices: ";
+    cout << "Min value is: " << min << ". Index (indices): ";
     for(int i = 0; i < length; i++) {
         if(array[i] == min) {
             cout << i << " ";

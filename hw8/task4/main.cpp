@@ -1,6 +1,8 @@
 #include <iostream>
 #include <ctime>
 
+void fillArray(int*, int);
+int getRandomNumber();
 int maxValue(int*, int);
 int minValue(int*, int);
 int maxNegativeValue(int*, int);
@@ -10,18 +12,13 @@ void printArray(int*, int);
 using std::cin;
 using std::cout;
 using std::endl;
-using std::srand;
-using std::rand;
-using std::time;
 
 int main() {
     srand(time(NULL));
 
     const int length = 10;
     int array[length];
-    for(int i = 0; i < length; i++) {
-        array[i] = rand() % 21 - 10;
-    }
+    fillArray(array, length);
 
     printArray(array, length);
     cout << "Max value: " << maxValue(array, length) << endl;
@@ -31,6 +28,16 @@ int main() {
 
     system("pause");
     return 0;
+}
+
+void fillArray(int* array, int length) {
+    for(int i = 0; i < length; i++) {
+        array[i] = getRandomNumber();
+    }
+}
+
+int getRandomNumber() {
+    return rand() % 21 - 10;
 }
 
 int maxValue(int *array, int length) {

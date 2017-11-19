@@ -1,6 +1,8 @@
 #include <iostream>
 #include <ctime>
 
+void fillArray(int*, int);
+int getRandomNumber();
 int sumValues(int*, int);
 int sumEvenValues(int*, int);
 int sumOddValues(int*, int);
@@ -11,18 +13,13 @@ void printArray(int*, int);
 using std::cin;
 using std::cout;
 using std::endl;
-using std::srand;
-using std::rand;
-using std::time;
 
 int main() {
     srand(time(NULL));
 
     const int length = 10;
     int array[length];
-    for(int i = 0; i < length; i++) {
-        array[i] = rand() % 11;
-    }
+    fillArray(array, length);
 
     printArray(array, length);
     cout << "Sum of values is: " << sumValues(array, length) << endl;
@@ -33,6 +30,16 @@ int main() {
 
     system("pause");
     return 0;
+}
+
+void fillArray(int *array, int length) {
+    for(int i = 0; i < length; i++) {
+        array[i] = getRandomNumber();
+    }
+}
+
+int getRandomNumber() {
+    return rand() % 11;
 }
 
 int sumValues(int *array, int length) {
