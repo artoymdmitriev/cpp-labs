@@ -27,9 +27,7 @@ int main() {
 void fillMatrix(int* array, int rows, int columns) {
     for(int i = 0; i < rows; i++) {
         for(int j = 0; j < columns; j++) {
-            int rn = getRandomNumber();
-            *(array + i * columns + j) = rn;
-            cout << rn << endl;
+            *(array + i * columns + j) = getRandomNumber();
         }
     }
 }
