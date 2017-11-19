@@ -9,7 +9,7 @@ using std::endl;
 
 int main() {
     const int length = 5;
-    cout << "Enter 5 numbers: ";
+    cout << "Enter " << length << " numbers: ";
     int array[length];
     for(int i = 0; i < length; i++) {
         cin >> array[i];
