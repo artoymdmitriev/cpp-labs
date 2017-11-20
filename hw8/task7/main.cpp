@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 void printMatrix(int*, int, int);
 void fillMatrix(int*, int, int);
@@ -31,7 +32,7 @@ void printMatrix(int *array, int rows, int columns) {
     cout << "Result: " << endl;
     for(int i = 0; i < rows; i++) {
         for(int j = 0; j < columns; j++) {
-            cout << *(array + i * columns + j) << " ";
+            cout << std::setw(4) << *(array + i * columns + j) << " ";
         }
         cout << endl;
     }

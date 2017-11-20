@@ -67,7 +67,7 @@ void printMatrix(double *matrix, int rows, int columns, int precision) {
     cout << std::setprecision(precision) << std::fixed;
     for(int i = 0; i < rows; i++) {
         for(int j = 0; j < columns; j++) {
-            cout << *(matrix + i * columns + j) << " ";
+            cout << std::setw(5) << *(matrix + i * columns + j) << " ";
         }
         cout << endl;
     }
