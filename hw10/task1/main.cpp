@@ -1,11 +1,13 @@
 #include <iostream>
 
-const int columns = 3;
-const int rows = 2;
+const int rows = 4;
+const int columns = 4;
 
-void fillMatrix(int [][columns]);
-void printMatrixRows(int [][columns]);
-void printMatrixColumns(int [][columns]);
+void fillMatrixRows(int [][columns]);
+void fillMatrixColumns(int [][columns]);
+void fillMatrixCorners(int [][columns]);
+void fillMatrixSnake(int [][columns]);
+void printMatrix(int [][columns]);
 
 using std::cin;
 using std::cout;
@@ -13,15 +15,21 @@ using std::endl;
 
 int main() {
     int matrix[rows][columns];
-    fillMatrix(matrix);
-    printMatrixRows(matrix);
-    cout << endl;
-    printMatrixColumns(matrix);
-    cout << endl;
+    //fillMatrixRows(matrix);
+    //printMatrix(matrix);
+    //cout << endl;
+    //fillMatrixSnake(matrix);
+    //fillMatrixColumns(matrix);
+    //printMatrix(matrix);
+    //cout << endl;
+
+    fillMatrixCorners(matrix);
+    system("pause");
     return 0;
 }
 
-void fillMatrix(int matrix[][columns]) {
+
+void fillMatrixRows(int matrix[][columns]) {
     for(int i = 0; i < rows; i++) {
         for(int j = 0; j < columns; j++) {
             cin >> matrix[i][j];
@@ -29,19 +37,26 @@ void fillMatrix(int matrix[][columns]) {
     }
 }
 
-void printMatrixRows(int matrix[][columns]) {
+void fillMatrixColumns(int matrix[][columns]) {
     for(int i = 0; i < rows; i++) {
         for(int j = 0; j < columns; j++) {
-            cout << matrix[i][j] << " ";
+            cin >> matrix[j][i];
         }
-        cout << endl;
     }
 }
 
-void printMatrixColumns(int matrix[][columns]) {
-    for(int i = 0; i < columns; i++) {
-        for(int j = 0; j < rows; j++) {
-            cout << matrix[j][i] << " ";
+void fillMatrixCorners(int matrix[][columns]) {
+
+}
+
+void fillMatrixSnake(int matrix[][columns]) {
+
+}
+
+void printMatrix(int matrix[][columns]) {
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < columns; j++) {
+            cout << matrix[i][j] << " ";
         }
         cout << endl;
     }
